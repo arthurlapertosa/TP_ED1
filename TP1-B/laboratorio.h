@@ -15,18 +15,14 @@ public:
 	laboratorio(int volume);
 
 	//Adiciona um frasco novo
-	void adicionarFrasco(int volume) {
-		frascos.addElement(volume);
-	}
+	void adicionarFrasco(int volume);
 
 	//Remove um frasco
-	void removerFrasco(int volume) {
-		frascos.deleteElement(volume);
-	}
+	void removerFrasco(int volume);
 
 	//Printa os frascos atuais
-	void PrintFrascos() {
-		frascos.printL();
-	}
+	void PrintFrascos();
+
+	int buscaOperacoes();
 };
 
