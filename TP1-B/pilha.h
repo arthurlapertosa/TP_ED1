@@ -23,6 +23,9 @@ public:
 	//Desempilha o elemento
 	int Desempilha();
 
+	//Retorna o numero de operações
+	int operacoes();
+
 	//Destrutor da pilha
 	~pilha();
 };

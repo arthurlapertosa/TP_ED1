@@ -23,6 +23,6 @@ public:
 	//Printa os frascos atuais
 	void PrintFrascos();
 
-	int buscaOperacoes();
+	int buscaOperacoes(int volume);
 };
 

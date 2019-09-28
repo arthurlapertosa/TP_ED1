@@ -40,6 +40,11 @@ int pilha::Desempilha()
 	}
 }
 
+int pilha::operacoes()
+{
+	return operacoes_;
+}
+
 
 pilha::~pilha()
 {

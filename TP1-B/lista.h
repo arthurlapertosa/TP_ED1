@@ -10,9 +10,10 @@ struct NoL
 
 class lista
 {
-private:
+protected:
 	NoL* sentinela;
 	int cardinalidade_;
+	friend class laboratorio;
 
 public:
 	//Cria uma lista vazia

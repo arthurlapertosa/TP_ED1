@@ -24,12 +24,9 @@ int main() {
 	//	valor = b->Desempilha();
 	//}
 	laboratorio Fini(50);
-	Fini.adicionarFrasco(70);
+	Fini.adicionarFrasco(60);
 	Fini.adicionarFrasco(120);
 	Fini.PrintFrascos();
 	std::cout << std::endl;
-	Fini.removerFrasco(70);
-	Fini.removerFrasco(60);
-	Fini.PrintFrascos();
-
+	std::cout << Fini.buscaOperacoes(350) << std::endl;
 }
