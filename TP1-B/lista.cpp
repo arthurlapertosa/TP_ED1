@@ -43,7 +43,7 @@ void lista::printL()
 {
 	NoL* i;
 	for (i = sentinela->esq; i != sentinela; i = i->esq) {
-		std::cout << i->valor << " -> ";
+		std::cout << i->valor << "ml -> ";
 	}
 	std::cout << std::endl;
 }
