@@ -63,3 +63,26 @@ int laboratorio::buscaOperacoes(int volume)
 		indexLoop++;
 	}
 }
+
+void laboratorio::interpretador(char* str)
+{
+	int volume;
+	char operacao;
+	if(sscanf(str, "%d %c", &volume, &operacao) == 2){
+		if (operacao == 'i') {
+			adicionarFrasco(volume);
+		}
+		else if (operacao == 'r') {
+			removerFrasco(volume);
+		}
+		else if (operacao == 'p') {
+			std::cout << "                        " << buscaOperacoes(volume) << std::endl;
+		}
+		else {
+			std::cout << "Formato inválido" << std::endl;
+		}
+	}
+	else {
+		std::cout << "Formato inválido" << std::endl;
+	}
+}

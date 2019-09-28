@@ -1,5 +1,3 @@
-#include "lista.h"
-#include "pilha.h"
 #include "laboratorio.h"
 
 int main() {
@@ -23,10 +21,18 @@ int main() {
 	//	std::cout << valor << std::endl;
 	//	valor = b->Desempilha();
 	//}
-	laboratorio Fini(50);
-	Fini.adicionarFrasco(60);
-	Fini.adicionarFrasco(120);
-	Fini.PrintFrascos();
-	std::cout << std::endl;
-	std::cout << Fini.buscaOperacoes(350) << std::endl;
+	//laboratorio Fini(50);
+	//Fini.adicionarFrasco(60);
+	//Fini.adicionarFrasco(120);
+	//Fini.PrintFrascos();
+	//std::cout << std::endl;
+	//std::cout << Fini.buscaOperacoes(350) << std::endl;
+	laboratorio Fini;
+	char str[500000];
+	char dump;
+	while (1) {
+		scanf("%[^\n]", str);
+		scanf("%c", &dump);
+		Fini.interpretador(str);
+	}
 }
