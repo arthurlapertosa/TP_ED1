@@ -26,6 +26,9 @@ public:
 	//Retorna o numero de operações
 	int operacoes();
 
+	//Retorna o tamanho da pilha
+	int size();
+
 	//Destrutor da pilha
 	~pilha();
 };
