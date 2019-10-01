@@ -10,9 +10,11 @@ struct NoL
 
 class lista
 {
-protected:
+private:
 	NoL* sentinela;
 	int cardinalidade_;
+
+	//Para o laboratório ter acesso aos elementos da lista diretamente
 	friend class laboratorio;
 
 public:

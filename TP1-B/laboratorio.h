@@ -3,6 +3,7 @@
 #include "lista.h"
 #include "pilha.h"
 #include <stdio.h>
+#include <stack>
 
 
 class laboratorio

@@ -27,39 +27,44 @@ void laboratorio::PrintFrascos()
 int laboratorio::buscaOperacoes(int volume)
 {
 	NoL* i;
-	pilha* aux = new pilha(1);
+	//pilha* aux = new pilha(1);
+	std::stack<int>* aux = new std::stack<int>;
 	for (i = frascos.sentinela->esq; i != frascos.sentinela; i = i->esq) {
 		//std::cout << i->valor << "ml -> ";
 		if (i->valor == volume) {
 			return 1;
 		}
-		aux->Empilha(i->valor);
+		aux->emplace(i->valor);
 	}
 
 	int indexLoop = 2;
-	pilha* anterior;
+	//pilha* anterior;
+	std::stack<int>* anterior;
 	anterior = aux;
 
 	while (1) {
-		pilha* loop = new pilha(indexLoop);
+		//pilha* loop = new pilha(indexLoop);
+		std::stack<int>* loop = new std::stack<int>;
 
-		int valor = anterior->Desempilha();
-
-		while(valor >= 0){
+		
+		
+		while(anterior->size() > 0){
+			int valor = anterior->top();
 			NoL* j;
 			for (j = frascos.sentinela->esq; j != frascos.sentinela; j = j->esq) {
-				loop->Empilha(valor + j->valor); //Empilha o novo valor
+				loop->emplace(valor + j->valor); //Empilha o novo valor
 				if (valor - j->valor > 0) { //Testa se o valor a ser empilhado é positivo
-					loop->Empilha(valor - j->valor); //Empilha o novo valor
+					loop->emplace(valor - j->valor); //Empilha o novo valor
 				}
 				if ((valor + j->valor == volume) || (valor - j->valor == volume) ) {
-					return loop->operacoes(); //Se o valor for encontrado, retorna ele.
+					return indexLoop; //Se o valor for encontrado, retorna ele.
 				}
 			}
-			valor = anterior->Desempilha();
+			anterior->pop();
 		}
-
+		std::cout << "Operacao numero: " << indexLoop << std::endl;
 		anterior = loop;
+		std::cout << "Tamanho da pilha atual: " << anterior->size() << std::endl;
 		indexLoop++;
 	}
 }

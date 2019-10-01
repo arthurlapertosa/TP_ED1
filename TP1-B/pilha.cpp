@@ -45,6 +45,11 @@ int pilha::operacoes()
 	return operacoes_;
 }
 
+int pilha::size()
+{
+	return cardinalidade_;
+}
+
 
 pilha::~pilha()
 {
