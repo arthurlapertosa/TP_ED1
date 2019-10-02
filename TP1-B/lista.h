@@ -12,6 +12,8 @@ class lista
 {
 private:
 	NoL* sentinela;
+
+	//Tamanho da lista
 	int cardinalidade_;
 
 	//Para o laboratório poder acessar os frascos diretamente.

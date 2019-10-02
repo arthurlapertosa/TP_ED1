@@ -8,6 +8,8 @@
 class laboratorio
 {
 private:
+
+	//Lista de frascos que contém no laboratório
 	lista frascos;
 
 public:

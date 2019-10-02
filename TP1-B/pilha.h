@@ -10,7 +10,11 @@ class pilha
 {
 private:
 	NoP* sentinela;
+
+	//Quantidade de operações que essa pilha representa
 	int operacoes_;
+
+	//Tamanho da pilha
 	int cardinalidade_;
 
 public:
