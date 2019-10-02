@@ -1,4 +1,5 @@
-#pragma once
+#ifndef LISTA_H
+#define LISTA_H
 #include <iostream>
 
 struct NoL 
@@ -12,6 +13,8 @@ class lista
 {
 private:
 	NoL* sentinela;
+
+	//Tamanho da lista
 	int cardinalidade_;
 
 	//Para o laboratório poder acessar os frascos diretamente.
@@ -34,3 +37,4 @@ public:
 	~lista();
 };
 
+#endif //LISTA_H

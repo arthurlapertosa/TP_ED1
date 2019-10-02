@@ -26,6 +26,10 @@ void laboratorio::PrintFrascos()
 
 int laboratorio::buscaOperacoes(int volume)
 {
+	//se o volume desejado é 0ml, então é necessário 0 operação
+	if (volume == 0) {
+		return 0;
+	}
 	NoL* i;
 	pilha* aux = new pilha(1);
 	for (i = frascos.sentinela->esq; i != frascos.sentinela; i = i->esq) {

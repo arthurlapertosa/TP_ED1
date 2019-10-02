@@ -1,4 +1,5 @@
-#pragma once
+#ifndef PILHA_H
+#define PILHA_H
 
 struct NoP {
 	int valor;
@@ -33,3 +34,4 @@ public:
 	~pilha();
 };
 
+#endif //PILHA_H

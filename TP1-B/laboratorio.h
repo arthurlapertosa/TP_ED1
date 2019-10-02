@@ -1,5 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS // Para o compilador deixar usar funções de C no C++ tive que adicionar isso
-#pragma once
+#ifndef LABORATORIO_H
+#define LABORATORIO_H
 #include "lista.h"
 #include "pilha.h"
 #include <stdio.h>
@@ -33,3 +34,4 @@ public:
 	void interpretador(char *str);
 };
 
+#endif //LABORATORIO_H
