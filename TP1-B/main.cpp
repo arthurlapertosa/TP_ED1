@@ -1,38 +1,17 @@
 #include "laboratorio.h"
 
 int main() {
-	//lista a;
-	//for (int i = 0; i < 100; i++) {
-	//	a.addElement(i);
-	//}
-	//a.printL();
-
-	//std::cout << std::endl;
-
-	//a.deleteElement(10);
-	//a.printL();
-	//pilha *b = new pilha(0);
-	//for (int i = 0; i < 100; i++) {
-	//	b->Empilha(i);
-	//}
-	//int valor = b->Desempilha();
-	//
-	//while(valor >= 50){
-	//	std::cout << valor << std::endl;
-	//	valor = b->Desempilha();
-	//}
-	//laboratorio Fini(50);
-	//Fini.adicionarFrasco(60);
-	//Fini.adicionarFrasco(120);
-	//Fini.PrintFrascos();
-	//std::cout << std::endl;
-	//std::cout << Fini.buscaOperacoes(350) << std::endl;
 	laboratorio Fini;
-	char str[500000];
+	char str[500] = "\0";
 	char dump;
 	while (1) {
-		scanf("%[^\n]", str);
-		scanf("%c", &dump);
+		str[0] = '\0';
+		fgets(str, 500, stdin);
+		if (str[0] == '\0') {
+			//Sai do programa se o usuário digitou CNTRL + Z no windows
+			break;
+		}
+		//Chama a função que interpreta o que o usuário digitou
 		Fini.interpretador(str);
 	}
 }
